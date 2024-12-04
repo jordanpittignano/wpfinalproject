@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="">
+        <link rel="icon" type="image/x-icon" href="">
+        <style type="text/css">
+
+            #header {
+                font-size: 60px; 
+                padding: 10px 0;
+                font-weight: 600;
+                font-family: 'Playfair Display', serif;
+                display: flex;
+                align-items: center;
+                flex-direction: column;
+            }
+
+            #header-content {
+                display: flex;
+                align-items: center;
+                justify-content: left;
+                margin-top: 20px;
+                width: 100%; 
+                padding: 0 80px;
+            }
+
+            #nav {
+                width: 100%;
+                display: flex;
+                justify-content: center;
+                margin-top: 10px;
+            }
+
+            #nav ul{
+                list-style-type: none; 
+                font-size: 15px; 
+                margin-bottom: 33px;
+                padding: 5px; 
+                font-weight: 400;
+                display: flex;
+                gap: 20px;
+            }
+
+
+            #nav ul a:hover {
+                text-decoration: underline;
+            }
+
+            #nav li a {
+                padding: 10px;
+                text-decoration: none;
+                font-size: 20px;
+            }
+
+            #footer {
+                margin-top: 80px;
+                height: auto;
+                padding-top: 20px;
+                padding-bottom: 20px;
+            }
+
+            li {
+                display: inline-block;
+            }
+
+            h1 {
+                text-align: center;
+            }
+
+            p {
+                text-align: center; 
+                margin-right: 20%; 
+                margin-left: 20%; 
+                font-size:20px; 
+                line-height: 1.5; 
+                padding-bottom: 40px
+            }
+
+            .form-element {
+                margin-bottom: 16px; 
+                font-size: 18px; 
+            }
+
+            .form-element label {
+                
+                text-align: center;
+                margin-right: 10px;
+            }
+
+
+            .form {
+                margin: 0 auto; 
+                text-align:center; 
+                margin-top: 50px
+            }
+
+            #contactBox {
+                border: 2px solid; 
+                margin-top: 50px; 
+                margin-left:20%; 
+                margin-right:20%;
+                padding-top: 50px
+            }
+
+            .errorMessage {
+                background-color: #fffdc3;
+            }
+
+            #botnav ul {
+                text-align: center; 
+                margin: 0 auto;
+            }
+
+            #botnav li {
+                list-style-type: none; 
+                display: inline; 
+                margin-right: 15px; 
+                padding: 10px;
+            }
+
+            #botnav ul a:hover {
+                text-decoration: underline;
+            }
+
+            #botnav li a {
+                padding: 10px;
+                text-decoration: none;
+                font-size: 20px;
+            }
+
+        </style>
+        <meta charset="utf-8">
+
+        <title>Contact Us</title>
+
+        <script src="https://code.jquery.com/jquery-3.7.1.min.js" 
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" 
+        crossorigin="anonymous"></script>
+
+        <script language="javascript">
+            function validateForm() {
+                valid = true
+                reqFields=["name", "email", "phone", "message"]
+                for (i=0; i<reqFields.length; i++) {
+                    field = document.getElementById(reqFields[i]);
+                    if (field.value == "") {
+                        id = "#" + reqFields[i]
+                        $(id).addClass("errorMessage");
+                        valid = false;
+                    }
+                }
+            
+                return valid  
+                }
+        </script>
+
+    </head>
+    <body>
+        <div id="header">
+            <div id="header-content">
+                <a href="index.html">
+                    <img id="header img" src="">
+                </a>
+                SculptSmart
+            </div>
+            <div id="nav">
+                <ul>
+                    <li><a href="">Home</a></li>
+                    <li><a href="">Services</a></li>
+                    <li><a href="">Plans</a></li>
+                    <li><a href="">Partners</a></li>
+                    <li><a href="contactUs.html">Contact Us</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <h1 style="margin-bottom: 65px">Get in Touch with SculptSmart!</h1>
+        <p>Have questions, feedback, or just want to say hello? We’d love to hear from you!
+             Whether you need help with the app, have suggestions for new features, or want
+              to share your fitness journey, our team is here to help. Drop us a message, 
+              and we’ll get back to you as soon as possible. Let's shape up together!
+        </p>
+        <div id="contactBox">
+
+            <div class="form">
+                <form method="get" action="#" onsubmit="return validateForm()">
+                    <div style="margin-top: -50px" class="form-element"><label>Name* </label>
+                    <input type="text" id="name" name="name" /></div>
+                    <div class="form-element"><label>Email* </label>
+                    <input type="text" id="email" name="email"/></div>
+                    <div class="form-element"><label>Phone* </label>
+                    <input type="text" id="phone" name="phone"/></div>
+                    <div class="form-element"><label>Subject </label>
+                    <input type="text" id="subject" name="subject"/></div>
+                    <br>
+                    <div class="form-element"><label>Message* </label>
+                    <textarea type="text" id="message" name="message"></textarea></div>
+                    <br>
+                    <input type="submit" value="Submit!" style="margin-bottom:30px">
+                </form>
+            </div>
+        </div>
+
+        <div id="footer">
+            <div id="botnav">
+                <ul>
+                    <li><a href="">Home</a></li>
+                    <li><a href="">Plans</a></li>
+                    <li><a href="contactUs.html">Contact Us</a></li>
+                </ul>
+            </div>
+        </div>
+    </body>
+</html>
