@@ -57,7 +57,8 @@ html,body {
 }
 h1 {
     font-family: 'Avenir Next Bold', sans-serif;
-    color:#f48341
+    color:#f48341;
+    text-align: center
 }
 #footer {
     margin-top: 80px;
