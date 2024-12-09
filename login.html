@@ -8,39 +8,42 @@
     crossorigin="anonymous"></script>
  
     <link rel="stylesheet" href="sculptSmart.css">
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="Favicon.jpg">
+
  
     <style>
-        html,body {background-color: #e6e3e3;}
-        #rightbox {width: 34%; min-height:100px;  display:inline-block; margin-bottom: 40px; padding: 3px; margin-right: 15%; text-align:center; background-color: #cccccc; font-size: 20px;}
-        #leftbox {width: 34%; min-height: 100px;  display: inline-block; vertical-align: top; padding: 3px; margin-bottom:40px; text-align: center; margin-left:15%; background-color: #cccccc; font-size: 20px;}
-        #formbox {width: 34%; min-height: 100px; border: 2px solid; border-color: #ff7b00; display: inline-block; vertical-align: top; padding: 3px; margin-bottom:20px; text-align: right; margin-left:15%; background-color: #cccccc; font-size: 20px;}
-        #apibox {width: 34%; min-height:100px; border: 2px solid; border-color: #ff7b00; display: inline-block; margin-bottom: 20px; padding: 3px; margin-right: 15%; background-color: #cccccc; font-size: 20px;}
+        #formbox {width: 34%; min-height: 100px; border: 2px solid; border-color: #ff7b00; display: inline-block; vertical-align: top; padding: 3px; margin-bottom:20px; text-align: right; margin-left:15%;  font-size: 20px;}
+        #apibox {width: 34%; min-height:100px; border: 2px solid; border-color: #ff7b00; display: inline-block; margin-bottom: 20px; padding: 3px; margin-right: 15%; font-size: 20px;}
         #api {text-align: center; font-weight: bold;}
-        select {margin-bottom: 6px; background-color: #cccccc;}
-        input {background-color: #cccccc;}
+        select {margin-bottom: 6px;}
+        input {margin:10px;}
+        input[type="submit"] {background-color: #ff7b00; padding: 5px; color: #ffffff; font-weight: bold}
+        label {margin-right: 10px; font-size: 18px}
         h1 {text-align: center;}
         .bold {font-weight: bold; font-size: 30px; text-decoration: underline; margin-top: 30px;}
-        #login{width:300px;margin:0 auto;text-align: center;}
-        p{width:300px;margin:0 auto;text-align: center;}
+        #login {width:300px;margin:0 auto;text-align: center;}
     </style>
        
+    <title>Log In</title>   
 </head>
  
 <body>
     <div id="header">
         <div id="header-content">
-            <a href="#">
-                <img id="logo-img"src="">
+            <a href="index.html">
+                <img id="header img" src="logo.jpg">
             </a>
+            <span style="font-family: 'Avenir Next Bold', sans-serif;">Sculpt</span>
+            <span style="font-family: 'Manrope', sans-serif; font-weight: 100;">Smart</span>
         </div>
-        Sculpt Smart
         <div id="nav">
             <ul>
                 <li><a href="#">Home</a></li>
-                <li><a href="service.html">Services</a></li>
-                <li><a href="#">Plans</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="plans.html">Plans</a></li>
                 <li><a href="#">Partners</a></li>
-                <li><a href="#">Contact Us</a></li>
+                <li><a href="contactUs.html">Contact Us</a></li>
             </ul>
         </div>
     </div>
@@ -97,29 +100,29 @@
         }
         
     </script>
-    <h1>Log-In</h1>
-    <p>Log-in to your personal SculptSmart account and start your journey today!</p>
+    <h1>Welcome to SculptSmart!</h1>
+    <p>Log in to your personal SculptSmart account and start your journey today!</p> <br>
     <div id="login">
         <form id="create" method="get" action="user.php">
-            <label>First Name*:</label>
-            <input type="text" id="first" name="first">
-            <label>Last Name*:</label>
-            <input type="text" id="last" name="last">
-            <label>Height*:</label>
+            <label>First Name*</label>
+            <input type="text" id="first" name="first"> <br>
+            <label>Last Name*</label>
+            <input type="text" id="last" name="last"><br>
+            <label style="margin-right: 90px;">Height*</label>
             <select id="feet" name="feet"></select>
-            <select id="inches" name="inches"></select>
-            <label>Weight:</label>
-            <input type="text" id="weight" name="weight">
-            <input type="submit" id="submit">
+            <select id="inches" name="inches"></select> <br>
+            <label style="margin-right:10px;">Weight (lbs)</label>
+            <input type="text" id="weight" name="weight"> <br>
+            <input type="submit" id="submit" value="Log In!">
         </form>
     </div>
  
     <div id="footer">
         <div id="botnav">
             <ul>
-                <li><a href="services.html">Home</a></li>
-                <li><a href="apt.html">Plans</a></li>
-                <li><a href="#">Contact Us</a></li>
+                <li><a href="#">Home</a></li>
+                <li><a href="plans.html">Plans</a></li>
+                <li><a href="contactUs.html">Contact Us</a></li>
             </ul>
         </div>
     </div>

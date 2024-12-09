@@ -60,6 +60,14 @@ h1 {
     color:#f48341;
     text-align: center
 }
+p {
+    text-align: center; 
+    margin-right: 20%; 
+    margin-left: 20%; 
+    font-size:20px; 
+    line-height: 1.5; 
+    padding-bottom: 40px
+}
 #footer {
     margin-top: 80px;
     height: auto;
