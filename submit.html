@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+ 
+<html>
+<head>
+    <meta charset="UTF-8">
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"
+    integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g="
+    crossorigin="anonymous"></script>
+ 
+    <link rel="stylesheet" href="sculptSmart.css">
+ 
+    <style>
+        html,body {background-color: #e6e3e3;}
+        #rightbox {width: 34%; min-height:100px;  display:inline-block; margin-bottom: 40px; padding: 3px; margin-right: 15%; text-align:center; background-color: #cccccc; font-size: 20px;}
+        #leftbox {width: 34%; min-height: 100px;  display: inline-block; vertical-align: top; padding: 3px; margin-bottom:40px; text-align: center; margin-left:15%; background-color: #cccccc; font-size: 20px;}
+        #formbox {width: 34%; min-height: 100px; border: 2px solid; border-color: #ff7b00; display: inline-block; vertical-align: top; padding: 3px; margin-bottom:20px; text-align: right; margin-left:15%; background-color: #cccccc; font-size: 20px;}
+        #apibox {width: 34%; min-height:100px; border: 2px solid; border-color: #ff7b00; display: inline-block; margin-bottom: 20px; padding: 3px; margin-right: 15%; background-color: #cccccc; font-size: 20px;}
+        #api {text-align: center; font-weight: bold;}
+        select {margin-bottom: 6px; background-color: #cccccc;}
+        input {background-color: #cccccc;}
+        h1 {text-align: center;}
+        .bold {font-weight: bold; font-size: 30px; text-decoration: underline; margin-top: 30px;}
+        #login{width:300px;margin:0 auto;text-align: center;}
+        p{width:300px;margin:0 auto;text-align: center;}
+    </style>
+       
+</head>
+ 
+<body>
+    <div id="header">
+        <div id="header-content">
+            <a href="#">
+                <img id="logo-img"src="">
+            </a>
+        </div>
+        Sculpt Smart
+        <div id="nav">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="service.html">Services</a></li>
+                <li><a href="#">Plans</a></li>
+                <li><a href="#">Partners</a></li>
+                <li><a href="#">Contact Us</a></li>
+            </ul>
+        </div>
+    </div>
+    <script>
+        window.onload = function(){
+            const feetSelect = document.getElementById('feet');
+            const inchSelect = document.getElementById('inches')
+            blankFeet = document.createElement('option');
+            blankFeet.value = "";
+            blankFeet.textContent = "";
+            feetSelect.appendChild(blankFeet);
+            blankInches = document.createElement('option');
+            blankInches.value = "";
+            blankInches.textContent = "";
+            inchSelect.appendChild(blankInches);
+            for(feet = 4; feet <= 7; feet++){
+                const option = document.createElement('option');
+                option.value = feet + " ft";
+                option.textContent = feet + " ft";
+                feetSelect.appendChild(option);
+            }
+            for(inches = 0; inches < 12; inches++){
+                const option = document.createElement('option');
+                option.value =  inches + " in";
+                option.textContent = inches + " in";
+                inchSelect.appendChild(option);
+            }
+            btn1 = document.getElementById('submit');
+            btn1.onclick = submitValidation
+            function submitValidation(){
+                first = document.getElementById('first').value;
+                last = document.getElementById('last').value;
+                inch = document.getElementById('inches').value;
+                foot = document.getElementById('feet').value;
+                if(first == ""){
+                    alert("First and Last Name is required");
+                    document.getElementById('first').focus();
+                    return false;
+                }
+                if(last == ""){
+                    alert("First and Last Name is required");
+                    document.getElementById('last').focus();
+                    return false;
+                }
+                if(inch == "" || feet ==""){
+                    alert("Height is required");
+                    document.getElementById('feet').focus();
+                    document.getElementById('inches').focus();
+                    return false;
+                }
+                return true;
+            }
+
+        }
+        
+    </script>
+    <h1>Log-In</h1>
+    <p>Log-in to your personal SculptSmart account and start your journey today!</p>
+    <div id="login">
+        <form id="create" method="get" action="user.php">
+            <label>First Name*:</label>
+            <input type="text" id="first" name="first">
+            <label>Last Name*:</label>
+            <input type="text" id="last" name="last">
+            <label>Height*:</label>
+            <select id="feet" name="feet"></select>
+            <select id="inches" name="inches"></select>
+            <label>Weight:</label>
+            <input type="text" id="weight" name="weight">
+            <input type="submit" id="submit">
+        </form>
+    </div>
+ 
+    <div id="footer">
+        <div id="botnav">
+            <ul>
+                <li><a href="services.html">Home</a></li>
+                <li><a href="apt.html">Plans</a></li>
+                <li><a href="#">Contact Us</a></li>
+            </ul>
+        </div>
+    </div>
+</body>
+
+
+
+</html>
