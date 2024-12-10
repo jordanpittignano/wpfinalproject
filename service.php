@@ -8,87 +8,11 @@
     crossorigin="anonymous"></script>
 
     <link rel="stylesheet" href="sculptSmart.css">
+    <link rel="icon" type="image/x-icon" href="Favicon.jpg">
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;700&display=swap" rel="stylesheet">
+    <title>Our Services</title>
 
     <style>
-        html,body {
-            background-color: #e6e3e3; 
-            margin: 0px;
-        }
-        
-        #header {
-            font-size: 60px; 
-            padding: 10px 0;
-            font-weight: 600;
-            font-family: 'Playfair Display', serif;
-            display: flex;
-            align-items: center;
-            flex-direction: column;
-        }
-
-        #header-content {
-            display: flex;
-            align-items: center;
-            justify-content: left;
-            margin-top: 20px;
-            width: 100%; 
-            padding: 0 80px;
-        }
-
-        #nav {
-            width: 100%;
-            display: flex;
-            justify-content: center;
-            margin-top: 10px;
-        }
-
-        #nav ul{
-            list-style-type: none; 
-            font-size: 15px; 
-            margin-bottom: 33px;
-            padding: 5px; 
-            font-weight: 400;
-            display: flex;
-            gap: 20px;
-        }
-
-        #nav ul a:hover {
-            text-decoration: underline;
-        }
-
-        #nav li a {
-            padding: 10px;
-            text-decoration: none;
-            font-size: 20px;
-        }
-
-        #botnav ul {
-            text-align: center; 
-            margin: 0 auto;
-        }
-
-        #botnav li {
-            list-style-type: none; 
-            display: inline; 
-            margin-right: 15px; 
-            padding: 10px;
-        }
-
-        #botnav ul a:hover {
-            text-decoration: underline;
-        }
-
-        #botnav li a {
-            padding: 10px;
-            text-decoration: none;
-            font-size: 20px;
-        }    
-
-        #footer {
-            margin-top: 80px;
-            height: auto;
-            padding-top: 20px;
-            padding-bottom: 20px;
-        }
 
         li {
             display: inline-block;
@@ -250,24 +174,25 @@
     ?>
     <div id="header">
         <div id="header-content">
-            <a href="index.html">
-                <img id="header img" src="">
+            <a href="sculptsmart.html">
+                <img id="header img" src="logo.jpg">
             </a>
-            SculptSmart
+            <span style="font-family: 'Avenir Next Bold', sans-serif;">Sculpt</span>
+            <span style="font-family: 'Manrope', sans-serif; font-weight: 100;">Smart</span>
         </div>
         <div id="nav">
             <ul>
-                <li><a href="">Home</a></li>
-                <li><a href="">Services</a></li>
-                <li><a href="">Plans</a></li>
-                <li><a href="">Partners</a></li>
+                <li><a href="sculptsmart.html">Home</a></li>
+                <li><a href="service.php">Services</a></li>
+                <li><a href="plans.html">Plans</a></li>
+                <li><a href="partners.html">Partners</a></li>
                 <li><a href="contactUs.html">Contact Us</a></li>
             </ul>
         </div>
     </div>
 
 
-    <h1>Our Service</h1>
+    <h1>Our Services</h1>
     <div id="leftbox"><div class='bold'>What we do</div></div> 
     <div id="rightbox">Our app empowers you to design personalized workouts by providing a curated library of exercises tailored to your targeted muscle groups and preferred difficulty level.</div>
 </br>
@@ -282,9 +207,9 @@
         </br>
             <label>Choose Difficulty: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
             <select size="1" name="level" id="level">
-                <option>beginner</option>
-                <option>intermediate</option>
-                <option>expert</option>
+                <option>Beginner</option>
+                <option>Intermediate</option>
+                <option>Expert</option>
             </select>
         </br>
         <input type="button" value="Run" id="btn">
@@ -298,8 +223,8 @@
     <div id="footer">
         <div id="botnav">
             <ul>
-                <li><a href="">Home</a></li>
-                <li><a href="">Plans</a></li>
+                <li><a href="sculptsmart.html">Home</a></li>
+                <li><a href="plans.html">Plans</a></li>
                 <li><a href="contactUs.html">Contact Us</a></li>
             </ul>
         </div>
