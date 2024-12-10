@@ -3,18 +3,19 @@
 <head>
   <title>Workout Products</title>
   <link rel="stylesheet" href="sculptsmart.css">
+  <link rel="icon" type="image/x-icon" href="Favicon.jpg">
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;700&display=swap" rel="stylesheet">
   <style>
     body, html {
     margin: 0;
     padding: 0;
-    font-family: Arial, sans-serif;
     background-color: #f7f7f7;
     color: #333;
     }
 
     /* Header styles */
     .header {
-    background-color: #007bff;
+    background-color: #ff7b00;
     color: white;
     text-align: center;
     padding: 20px 0;
@@ -58,7 +59,7 @@
     .product-card h2 {
     margin: 10px 0;
     font-size: 1.5rem;
-    color: #007bff;
+    color: #ff7b00;
     }
 
     /* Product description */
@@ -75,57 +76,78 @@
         margin: 0 auto;
         text-align: center;
     }
+    h2 {
+        margin-top: 100px;
+    }
+    #logoimages img {
+        height: 100px;
+        width: auto;
+        padding: 20px;
+    }
+    #logoimages {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
   </style>
 </head>
 <body>
     <div id="header">
         <div id="header-content">
-            <a href="#">
-                <img id="logo-img"src="">
+            <a href="index.html">
+                <img id="header img" src="logo.jpg">
             </a>
+            <span style="font-family: 'Avenir Next Bold', sans-serif;">Sculpt</span>
+            <span style="font-family: 'Manrope', sans-serif; font-weight: 100;">Smart</span>
         </div>
-        Sculpt Smart
         <div id="nav">
             <ul>
                 <li><a href="#">Home</a></li>
-                <li><a href="service.html">Services</a></li>
-                <li><a href="#">Plans</a></li>
-                <li><a href="#">Partners</a></li>
-                <li><a href="#">Contact Us</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="plans.html">Plans</a></li>
+                <li><a href="partners.html">Partners</a></li>
+                <li><a href="contactUs.html">Contact Us</a></li>
             </ul>
         </div>
     </div>
     <h1>Partnerships</h1>
-    <p id="description">We are excited to be partnered with companies to help our users get the equipment they need to take their workouts to the next level. These products can all be purchased with a 10% discount using the code: SCULPT when purchasing.</p>
+    <p id="description">We are excited to be partnered with companies to help our users get the equipment they need to take their workouts to the next level. These products can all be purchased with a <strong>10% discount</strong> using the code <strong>SCULPT</strong> at checkout!</p>
     <div class="product-container">
         <a href="https://www.bowflex.com/product/552-adjustable-dumbbells/100131.html?adID=DOFG2BFEED1&gad_source=1&gbraid=0AAAAA9_dAMpdpeTnUlaPeZn_fLIDyazWu&gclid=Cj0KCQiAx9q6BhCDARIsACwUxu4OpmrRytC3uF93KkdoECisGwdVBBtNCf30i3n-vMWoVvCUL10aIqgaAnT4EALw_wcB" style="text-decoration: none;" target="_blank">
         <div class="product-card" id = "dumbell">
-            <img src="https://via.placeholder.com/300x200?text=Adjustable+Dumbbells" alt="Adjustable Dumbbells">
-            <h2>Adjustable Dumbbells</h2>
+            <img src="weight.jpg" alt="Adjustable Dumbbells">
+            <h2>BowFlex Adjustable Dumbbells</h2>
             <p>Perfect for at-home workouts, these dumbbells let you adjust the weight with ease. Compact and versatile, they're great for any strength training routine. Build muscle and save space with this innovative fitness tool.</p>
         </div>
         </a>
         <a href="https://shop.lululemon.com/p/yoga-mats/The-Big-Mat-5mm/_/prod11710476?color=3327&sz=ONESIZE" style="text-decoration: none;" target="_blank">
         <div class="product-card" id = "yoga">
-            <img src="https://via.placeholder.com/300x200?text=Yoga+Mat" alt="Yoga Mat">
-            <h2>Yoga Mat</h2>
+            <img src="mat.jpg" alt="Yoga Mat" style="height: 300px;">
+            <h2>LuluLemon Yoga Mat</h2>
             <p>This premium yoga mat provides excellent grip and cushioning for all your poses. Lightweight and durable, it's perfect for beginners and advanced yogis alike. Enhance your practice with this comfortable, non-slip mat.</p>
         </div>
         </a>
         <a href="https://www.trxtraining.com/products/exercise-bands" style="text-decoration: none;" target="_blank">
         <div class="product-card" id = "bands">
-            <img src="https://via.placeholder.com/300x200?text=Resistance+Bands" alt="Resistance Bands">
-            <h2>Resistance Bands Set</h2>
+            <img src="trx.jpg" alt="Resistance Bands">
+            <h2>TRX Resistance Band Set</h2>
             <p>Tone your muscles with this set of resistance bands for all fitness levels. Compact and portable, these bands are great for home or travel workouts. Add variety to your routine with this versatile workout tool.</p>
         </div>
         </a>
     </div>
+
+    <h2>SmartSculpt is proud to partner with these great brands!</h2>
+    <div id="logoimages">
+        <img src="bowflex.jpg">
+        <img src="lulu.jpg">
+        <img src="trxlogo.jpg">
+    </div>
   <div id="footer">
     <div id="botnav">
         <ul>
-            <li><a href="services.html">Home</a></li>
-            <li><a href="apt.html">Plans</a></li>
-            <li><a href="#">Contact Us</a></li>
+            <li><a href="#">Home</a></li>
+            <li><a href="plans.html">Plans</a></li>
+            <li><a href="contactUs.html">Contact Us</a></li>
         </ul>
     </div>
 </div>
