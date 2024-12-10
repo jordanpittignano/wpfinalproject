@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="sculptsmart.css">
+        <link rel="icon" type="image/x-icon" href="Favicon.jpg">
+        <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;700&display=swap" rel="stylesheet">
+        <style type="text/css">
+
+            li {
+                display: inline-block;
+            }
+
+            #botnav ul {
+                text-align: center; 
+                margin: 0 auto;
+            }
+
+            #botnav li {
+                list-style-type: none; 
+                display: inline; 
+                margin-right: 15px; 
+                padding: 10px;
+            }
+
+            #botnav ul a:hover {
+                text-decoration: underline;
+            }
+
+            #botnav li a {
+                padding: 10px;
+                text-decoration: none;
+                font-size: 20px;
+            }
+
+            #leftImage {
+                height: 350px;
+                width: auto;
+            }
+
+            #centerImage {
+                height: 350px;
+                width: auto; 
+            }
+
+            #rightImage {
+                height: 350px;
+                width: auto; 
+            }
+
+            #imagesContainer {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                gap: 10px;
+                margin-top: 50px;
+            }
+
+            h1 {
+                margin-top: 50px;
+            }
+
+            #buttonContainer {
+                display: flex; 
+                justify-content: center; 
+                align-items: center;
+                padding-top: 20px;
+                margin-bottom: 50px;
+            }
+
+            #button1 {
+                background-color: #ffefe3; 
+                color: #f48341;
+                border: 2px solid #f48341;
+                padding: 10px 10px; 
+                font-size: 20px; 
+                font-weight: 600; 
+                display: inline-block;
+                margin: 0 auto;
+                font-family: 'Avenir Next Bold', sans-serif;
+            }
+
+            #button2 {
+                background-color: #ffefe3; 
+                color: #f48341;
+                border: 8px solid #ffffff;
+                padding: 15px 15px; 
+                font-size: 25px; 
+                font-weight: 600; 
+                display: inline-block;
+                margin: 0 auto;
+                font-family: 'Avenir Next Bold', sans-serif;
+            }
+
+            #button1:hover {
+                background-color: #ffcd8c;
+                color: #f48341;
+            }
+
+            #button2:hover {
+                background-color: #ffffff;
+                color: #f48341;
+            }
+
+            p {
+                text-align: center; 
+                color: #000000;
+                margin-right: 28%; 
+                margin-left: 28%; 
+                font-size: 20px; 
+                line-height: 1.9; 
+                font-family: 'Manrope', sans-serif; 
+            }
+
+            #testimonial {
+                background-color: #f2f2f2;
+                padding: 10px;
+                margin-top: 10px;
+                width: 100%;
+                max-width: 400px;
+                border-radius: 5px;
+                box-sizing: border-box;
+            }
+
+            #testimonials {
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                gap: 38px;
+                max-width: 1100px;
+                margin: auto;
+                justify-items: center;
+                margin-bottom: 100px;
+            }
+
+            #quotes {
+                font-size: 15px;
+                margin: 0;
+                line-height: 2.7;
+                margin-top: 20px;
+            }
+
+            #person {
+                font-size: 17px;
+                margin: 0;
+                line-height: 2.7;
+                font-weight: 600;
+                color: #f48341;
+                margin-bottom: 10px;
+            }
+
+            #banner {
+                width: 100%;
+                height: 300px;
+                background-image: url("banner.jpg");
+            }
+
+
+        </style>
+        <meta charset="utf-8">
+
+        <title>Contact Us</title>
+
+        <script src="https://code.jquery.com/jquery-3.7.1.min.js" 
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" 
+        crossorigin="anonymous"></script>
+
+
+    </head>
+    <body>
+        <div id="header">
+            <div id="header-content">
+                <a href="index.html">
+                    <img id="header img" src="logo.jpg">
+                </a>
+                <span style="font-family: 'Avenir Next Bold', sans-serif;">Sculpt</span>
+                <span style="font-family: 'Manrope', sans-serif; font-weight: 100;">Smart</span>
+
+            </div>
+            <div id="nav">
+                <ul>
+                    <li><a href="">Home</a></li>
+                    <li><a href="">Services</a></li>
+                    <li><a href="plans.html">Plans</a></li>
+                    <li><a href="">Partners</a></li>
+                    <li><a href="contactUs.html">Contact Us</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <h1 style="font-size: 35px">
+            Welcome to Sculpt Smart!
+        </h1>
+
+        <h1 style="font-family: 'Manrope', sans-serif; font-weight: 100; font-size: 25px; margin-top: 10px;">
+            Where Strength Meets Strategy
+        </h1>
+
+        <div id="buttonContainer">
+            <a style="text-decoration: none" id="button1" href="plans.html">Pick a Plan!</a>
+        </div>
+    
+        <div id="imagesContainer">
+            <img id="leftImage" src="homeleft.jpg" alt="">
+            <img id="centerImage" src="homecenter.jpg" alt="">
+            <img id="rightImage" src="homeright.jpg" alt="">
+        </div>
+
+        <div>
+            <p style="margin-top: 70px; margin-bottom: 70px;">Transform your body on your terms with Sculpt Smart. Our <strong>customized</strong> fitness programs and workouts are designed to fit your unique <strong>goals, lifestyle, level of experience, and preferences</strong>. Whether you're just starting out, or have been weight lifting for years, you can achieve amazing results from the comfort of your <strong>own home</strong>. Say goodbye to crowded gyms and hello to effective workouts tailored to you! </p>
+        </div>
+
+        <h1 style="margin-bottom: 15px;">Don't Believe Us? <br> Hear What Our Members Have To Say...</h1>
+
+        <div id="testimonials">
+            <div id="testimonial">
+                <p id="quotes">"What I love about Sculpt Smart is how empowering it is to work out on my own terms. The at-home program is so easy to follow, and everything is clearly laid out."</p>
+                <br>
+                <p id="person">- Laura M, joined September 2023</p>
+            </div>
+    
+            <div id="testimonial">
+                <p id="quotes">"The online workouts and exercises target exactly what I need. I never thought I’d be able to achieve this kind of transformation without going to a gym!"</p>
+                <br>
+                <p id="person">- Aiyanna S, joined August 2024</p>
+            </div>
+    
+            <div id="testimonial">
+                <p id="quotes"> I can honestly say Sculpt Smart is worth every penny. The personalized approach makes it stand out from other fitness programs. I've never felt so confident!"</p>
+                <br>
+                <p id="person">- Mark D, Joined January 2020</p>
+            </div>
+        </div> 
+
+        <div id="banner">
+            <h1 style="color: #ffffff; font-size: 40px"><br>Start Your Journey Today.</h1>
+            <div id="buttonContainer">
+                <a style="text-decoration: none; margin-top: 5px;" id="button2" href="plans.html">Learn More</a>
+            </div>
+        </div>
+
+        <div>
+            <br>
+        </div>
+
+        <div id="footer">
+            <div id="botnav">
+                <ul>
+                    <li><a href="">Home</a></li>
+                    <li><a href="plans.html">Plans</a></li>
+                    <li><a href="contactUs.html">Contact Us</a></li>
+                </ul>
+            </div>
+        </div>
+    </body>
+</html>
