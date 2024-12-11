@@ -7,7 +7,7 @@
     integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" 
     crossorigin="anonymous"></script>
 
-    <link rel="stylesheet" href="sculptSmart.css">
+    <link rel="stylesheet" href="sculptsmart.css">
     <link rel="icon" type="image/x-icon" href="Favicon.jpg">
     <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;700&display=swap" rel="stylesheet">
     <title>Our Services</title>
@@ -23,11 +23,11 @@
             min-height:100px;  
             display:inline-block; 
             margin-bottom: 40px; 
-            padding: 3px; 
+            padding: 10px; 
             margin-right: 15%; 
             text-align:center; 
-            background-color: #cccccc; 
             font-size: 20px;
+            margin-top: 20px;
         }
         #leftbox {
             width: 34%; 
@@ -38,51 +38,49 @@
             margin-bottom:40px; 
             text-align: center; 
             margin-left:15%; 
-            background-color: #cccccc; 
+            margin-top: 20px;
             font-size: 20px;}
         #formbox {
             width: 34%; 
             min-height: 100px; 
             border: 2px solid; 
             border-color: #ff7b00;
-            display: inline-block; 
             vertical-align: top; 
             padding: 3px; 
             margin-bottom:20px;
-            text-align: right; 
-            margin-left:15%; 
-            background-color: #cccccc; 
+            text-align: center; 
             font-size: 20px;
+            align-items: center;
         }
         #apibox {
-            width: 34%; 
-            min-height:100px; 
-            border: 2px solid; 
-            border-color: #ff7b00; 
-            display: inline-block; 
-            margin-bottom: 20px; 
-            padding: 3px; 
-            margin-right: 15%; 
-            background-color: #cccccc; 
-            font-size: 20px;
+            width: 60%; 
+            min-height: 200px; 
+            border: 2px solid #ff7b00;
+            display: block; 
+            margin: 20px auto; 
+            padding: 15px;
+            font-size: 16px; 
+            overflow: auto; 
+        }
+        #container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
         #api {
             text-align: center; 
-            font-weight: bold;
+            white-space: pre-wrap; 
+            line-height: 1.5; 
         }
+
         select {
             margin-bottom: 6px; 
-            background-color: #cccccc;
         }
-        input {
-            background-color: #cccccc;
-        }
-        h1 {text-align: center;
-        }
-        .bold {font-weight: bold; 
+        .bold {
+            font-weight: bold; 
             font-size: 30px; 
-            text-decoration: underline; 
             margin-top: 30px;
+            color: #ff7b00;
         }
 
         #header img {
@@ -91,6 +89,15 @@
             height: 100px;
             width: auto;
         }
+        input {
+            margin: 10px;
+            background-color: #ff7b00;
+            color: #ffffff; 
+            font-weight: bold
+        }
+
+
+
     </style>
    
     <script>    
@@ -110,7 +117,7 @@
                     success: function(result) {
                         datastring = JSON.stringify(result)
                         info = JSON.parse(datastring)
-                        console.log(info)
+                        $('#api').html(JSON.stringify(info, null, 2));
                         ctr =0
                         if (level == "expert") {
                             $('#api').html('Uprade to Pro to see more options!')
@@ -193,19 +200,22 @@
 
 
     <h1>Our Services</h1>
-    <div id="leftbox"><div class='bold'>What we do</div></div> 
-    <div id="rightbox">Our app empowers you to design personalized workouts by providing a curated library of exercises tailored to your targeted muscle groups and preferred difficulty level.</div>
+    <div id="leftbox"><div class='bold'>What We Do</div></div> 
+    <div id="rightbox">Our app empowers you to design <strong>personalized workouts</strong> by providing a curated library of exercises tailored to your <strong>targeted muscle groups</strong> and <strong>preferred difficulty level</strong>.</div>
 </br>
-    <div id="leftbox">Whether you're a beginner or a fitness enthusiast, our app takes the guesswork out of workout planning, helping you achieve your fitness goals efficiently and confidently.</div> 
-    <div id="rightbox"><div class='bold'>Why you need it</div></div>
+    <div id="leftbox"><div class='bold'>Why You Need It!</div></div>
+    <div id="rightbox">Whether you're a beginner or a fitness enthusiast, our app takes the guesswork out of <strong>workout planning</strong>, helping you <strong>achieve your fitness goals</strong> efficiently and confidently.</div> 
 </br>
+    <h2>Try It Out!</h2>
+<br>
+    <div id="container">
     <div id="formbox">
         
             <label>Choose Muscle Group: </label>
             <select size="1" id="muscle">
             </select>
         </br>
-            <label>Choose Difficulty: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+            <label>Choose Difficulty: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
             <select size="1" name="level" id="level">
                 <option>Beginner</option>
                 <option>Intermediate</option>
@@ -215,10 +225,12 @@
         <input type="button" value="Run" id="btn">
         
     </div>
-
-    <div id="apibox">
-        <div id="api">Click Run to see results!</div>
     </div>
+    <div id="apibox">
+        <div id="api">Click run to see results!</div>
+    </div>
+
+
 
     <div id="footer">
         <div id="botnav">
