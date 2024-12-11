@@ -9,71 +9,111 @@
 
     /* Product container styles */
     .product-container {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    padding: 20px;
-    gap: 20px;
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        padding: 20px;
+        gap: 20px;
     }
 
     /* Product card styles */
     .product-card {
-    background-color: white;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    border-radius: 8px;
-    overflow: hidden;
-    max-width: 300px;
-    width: 100%;
-    text-align: center;
-    padding: 15px;
-    transition: transform 0.3s;
+        background-color: white;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        border-radius: 8px;
+        overflow: hidden;
+        max-width: 300px;
+        width: 100%;
+        text-align: center;
+        padding: 15px;
+        transition: transform 0.3s;
     }
 
     .product-card:hover {
-    transform: scale(1.05);
+        transform: scale(1.05);
     }
 
     /* Product image */
     .product-card img {
-    width: 100%;
-    height: auto;
-    border-bottom: 1px solid #ddd;
+        width: 100%;
+        height: auto;
+        border-bottom: 1px solid #ddd;
     }
 
     /* Product title */
     .product-card h2 {
-    margin: 10px 0;
-    font-size: 1.5rem;
-    color: #ff7b00;
+        margin: 10px 0;
+        font-size: 1.5rem;
+        color: #ff7b00;
     }
 
     /* Product description */
     .product-card p {
-    font-size: 1rem;
-    line-height: 1.5;
-    color: #555555;
+        font-size: 1rem;
+        line-height: 1.5;
+        color: #555555;
     }
+
     h1{
         text-align: center;
     }
+    
     #description{
         width:600px;
         margin: 0 auto;
         text-align: center;
     }
+
     h2 {
         margin-top: 100px;
     }
+
     #logoimages img {
         height: 100px;
         width: auto;
         padding: 20px;
     }
+
     #logoimages {
         display: flex;
         justify-content: center;
         align-items: center;
     }
+
+    #yogamat {
+        margin-bottom: -2px;
+    }
+
+    #trx {
+        margin-bottom: -4px;
+    }
+
+    @media(max-width: 775px) {
+        #logoimages img {
+            height: 75px;
+            width: auto;
+        }
+
+        #description {
+            width: 500px; 
+        }
+    }
+
+    @media(max-width: 620px) {
+        #logoimages img {
+            height: 50px;
+            width: auto;
+        }
+
+        #proud {
+            font-size: 20px;
+        }
+
+        #description {
+            width: 400px; 
+        }
+    }
+
   </style>
 </head>
 <body>
@@ -109,19 +149,19 @@
         <div class="product-card" id = "yoga">
             <img src="mat.jpg" alt="Yoga Mat" style="height: 300px;">
             <h2>LuluLemon Yoga Mat</h2>
-            <p>This premium yoga mat provides excellent grip and cushioning for all your poses. Lightweight and durable, it's perfect for beginners and advanced yogis alike. Enhance your practice with this comfortable, non-slip mat.</p>
+            <p id="yogamat">This premium yoga mat provides excellent grip and cushioning for all your poses. Lightweight and durable... it's basically perfect.</p>
         </div>
         </a>
         <a href="https://www.trxtraining.com/products/exercise-bands" style="text-decoration: none;" target="_blank">
         <div class="product-card" id = "bands">
             <img src="trx.jpg" alt="Resistance Bands">
             <h2>TRX Resistance Band Set</h2>
-            <p>Tone your muscles with this set of resistance bands for all fitness levels. Compact and portable, these bands are great for home or travel workouts. Add variety to your routine with this versatile workout tool.</p>
+            <p id="trx">Tone your muscles with this set of resistance bands for all fitness levels. Compact and portable, these bands are great for home or travel workouts. Add variety to your routine with this versatile workout tool.</p>
         </div>
         </a>
     </div>
 
-    <h2>SmartSculpt is proud to partner with these great brands!</h2>
+    <h2 id="proud">SmartSculpt is proud to partner with these great brands!</h2>
     <div id="logoimages">
         <img src="bowflex.jpg">
         <img src="lulu.jpg">
