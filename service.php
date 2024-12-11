@@ -17,29 +17,6 @@
         li {
             display: inline-block;
         }
-    
-        #rightbox {
-            width: 34%; 
-            min-height:100px;  
-            display:inline-block; 
-            margin-bottom: 40px; 
-            padding: 10px; 
-            margin-right: 15%; 
-            text-align:center; 
-            font-size: 20px;
-            margin-top: 20px;
-        }
-        #leftbox {
-            width: 34%; 
-            min-height: 100px;  
-            display: inline-block; 
-            vertical-align: top; 
-            padding: 3px; 
-            margin-bottom:40px; 
-            text-align: center; 
-            margin-left:15%; 
-            margin-top: 20px;
-            font-size: 20px;}
         #formbox {
             width: 34%; 
             min-height: 100px; 
@@ -53,7 +30,7 @@
             align-items: center;
         }
         #apibox {
-            width: 60%; 
+            width: 40%; 
             min-height: 200px; 
             border: 2px solid #ff7b00;
             display: block; 
@@ -61,11 +38,14 @@
             padding: 15px;
             font-size: 16px; 
             overflow: auto; 
+            justify-content: center;
+            align-items: center;
         }
         #container {
             display: flex;
             justify-content: center;
-            align-items: center;
+            align-items: flex-start;
+            flex-wrap: wrap;
         }
         #api {
             text-align: center; 
@@ -99,11 +79,14 @@
             list-style-type: none;
             padding: 0;
             margin: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
         }
 
         .exercise-item {
             background-color: #f9f9f9;
-            border-left: 4px solid #ff7b00;
+            border: 4px solid #ff7b00;
             padding: 15px;
             margin-bottom: 10px;
             transition: background-color 0.3s ease;
@@ -141,10 +124,6 @@
         }
 
         @media (max-width: 1500px) {
-            #leftbox, #rightbox {
-                width: 80%; 
-                margin: 10px auto;
-            }
 
             .bold {
                 font-size: 24px; 
@@ -158,7 +137,7 @@
             }
         }
         @media (max-width: 1250px) {
-            #leftbox, #rightbox, #formbox {
+            #formbox {
                 width: 80%; 
                 margin: 10px auto;
                 font-size: 16px;
@@ -297,17 +276,17 @@
 
     <h1>Our Services</h1>
     <div id="topcontainer">
-    <div id="leftbox"><div class='bold'>What We Do</div></div> 
-    <div id="rightbox">Our app empowers you to design <strong>personalized workouts</strong> by providing a curated library of exercises tailored to your <strong>targeted muscle groups</strong> and <strong>preferred difficulty level</strong>.</div>
+    <h2 style="margin-top: 20px;">What We Do</h2> 
+    <p>Our app empowers you to design <strong>personalized workouts</strong> by providing a curated library of exercises tailored to your <strong>targeted muscle groups</strong> and <strong>preferred difficulty level</strong>.</p>
 </br>
-    <div id="leftbox"><div class='bold'>Why You Need It!</div></div>
-    <div id="rightbox">Whether you're a beginner or a fitness enthusiast, our app takes the guesswork out of <strong>workout planning</strong>, helping you <strong>achieve your fitness goals</strong> efficiently and confidently.</div> 
+    <h2>Why You Need It!</h2>
+    <p>Whether you're a beginner or a fitness enthusiast, our app takes the guesswork out of <strong>workout planning</strong>, helping you <strong>achieve your fitness goals</strong> efficiently and confidently.</p>
 </br>
     </div>
-    <h2>Try It Out!</h2>
 <br>
     <div id="container">
     <div id="formbox">
+    <h2>Try It Out!</h2>
         
             <label>Choose Muscle Group: </label>
             <select size="1" id="muscle">
