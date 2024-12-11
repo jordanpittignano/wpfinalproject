@@ -98,9 +98,8 @@
 
         @media (max-width: 1500px) {
             #leftbox, #rightbox {
-                width: 90%; 
+                width: 80%; 
                 margin: 10px auto;
-                font-size: 16px;
             }
 
             .bold {
@@ -115,8 +114,8 @@
             }
         }
         @media (max-width: 1250px) {
-            #formbox {
-                width: 90%; 
+            #leftbox, #rightbox, #formbox {
+                width: 80%; 
                 margin: 10px auto;
                 font-size: 16px;
             }
@@ -127,7 +126,7 @@
                 font-size: 16px;
             }
             #apibox {
-                width: 90%;
+                width: 80%;
                 font-size: 14px;
             }
         }
