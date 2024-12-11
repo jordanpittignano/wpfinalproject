@@ -96,6 +96,42 @@
             font-weight: bold
         }
 
+        @media (max-width: 1500px) {
+            #leftbox, #rightbox {
+                width: 90%; 
+                margin: 10px auto;
+                font-size: 16px;
+            }
+
+            .bold {
+                font-size: 24px; 
+            }
+            #topcontainer {
+                display: flex;
+                flex-wrap: wrap; 
+                justify-content: center; 
+                align-items: center; 
+                gap: 20px; 
+            }
+        }
+        @media (max-width: 1250px) {
+            #formbox {
+                width: 90%; 
+                margin: 10px auto;
+                font-size: 16px;
+            }
+            select, input[type="button"] {
+                width: 100%; 
+                margin: 10px 0;
+                padding: 10px;
+                font-size: 16px;
+            }
+            #apibox {
+                width: 90%;
+                font-size: 14px;
+            }
+        }
+
 
 
     </style>
@@ -200,12 +236,14 @@
 
 
     <h1>Our Services</h1>
+    <div id="topcontainer">
     <div id="leftbox"><div class='bold'>What We Do</div></div> 
     <div id="rightbox">Our app empowers you to design <strong>personalized workouts</strong> by providing a curated library of exercises tailored to your <strong>targeted muscle groups</strong> and <strong>preferred difficulty level</strong>.</div>
 </br>
     <div id="leftbox"><div class='bold'>Why You Need It!</div></div>
     <div id="rightbox">Whether you're a beginner or a fitness enthusiast, our app takes the guesswork out of <strong>workout planning</strong>, helping you <strong>achieve your fitness goals</strong> efficiently and confidently.</div> 
 </br>
+    </div>
     <h2>Try It Out!</h2>
 <br>
     <div id="container">
