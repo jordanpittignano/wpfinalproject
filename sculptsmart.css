@@ -41,7 +41,7 @@ html,body {
 
 #nav ul{
     list-style-type: none; 
-    font-size: 15px; 
+    font-size: 20px; 
     margin-bottom: 33px;
     padding: 5px; 
     font-weight: 400;
@@ -58,7 +58,7 @@ html,body {
 #nav li a {
     padding: 10px;
     text-decoration: none;
-    font-size: 22px;
+    font-size: 20px;
     color:#f48341;
     font-family: 'Manrope', sans-serif; 
     font-weight: 100;
@@ -118,21 +118,31 @@ h2 {
 
 @media(max-width: 1470px) {
     #nav li a {
-        font-size: 18px;
+        font-size: 17px;
     }
 
     #header {
-        font-size: 58px; 
+        font-size: 56px; 
+    }
+
+    #header img {
+        width: 105px;
+        height: auto;
     }
 }
 
-@media(max-width: 1215px) {
+@media(max-width: 1350px) {
     #nav li a {
-        font-size: 15px;
+        font-size: 23px;
     }
 
     #header {
         font-size: 52px; 
+    }
+
+    #nav ul {
+        flex-direction: column;
+        align-items: center;
     }
 }
 
