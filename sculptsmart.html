@@ -152,10 +152,106 @@
                 height: 300px;
                 background-image: url("banner.jpg");
             }
+
             h2 {
                 padding: 30px;
             }
 
+            @media(max-width: 1250px) {
+                #leftImage {
+                    height: 300px;
+                    width: auto;
+                }
+
+                #centerImage {
+                    height: 300px;
+                    width: auto;
+                }
+
+                #rightImage {
+                    height: 300px;
+                    width: auto;
+                }
+
+                #testimonials {
+                    max-width: 1000px;
+                }
+            }
+
+            @media(max-width: 1028px) {
+                #leftImage {
+                    height: 250px;
+                    width: auto;
+                }
+
+                #centerImage {
+                    height: 250px;
+                    width: auto;
+                }
+
+                #rightImage {
+                    height: 250px;
+                    width: auto;
+                }
+
+                #testimonials {
+                    max-width: 850px;
+                }
+            }
+
+            @media(max-width: 855px) {
+                #leftImage {
+                    height: 200px;
+                    width: auto;
+                }
+
+                #centerImage {
+                    height: 200px;
+                    width: auto;
+                }
+
+                #rightImage {
+                    height: 200px;
+                    width: auto;
+                }
+
+                #testimonials {
+                    max-width: 700px;
+                }
+            }
+
+            @media(max-width: 750px) {
+                #testimonials {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                }
+            }
+
+            @media(max-width: 715px) {
+                #leftImage {
+                    height: 300px;
+                    width: auto;
+                }
+
+                #centerImage {
+                    height: 300px;
+                    width: auto;
+                }
+
+                #rightImage {
+                    height: 300px;
+                    width: auto;
+                }
+
+                #imagesContainer {
+                    flex-direction: column;    
+                }
+
+                #blurb {
+                    font-size: 18px;
+                }
+            }
 
         </style>
         <meta charset="utf-8">
@@ -208,7 +304,7 @@
         </div>
 
         <div>
-            <p style="margin-top: 70px; margin-bottom: -20px;">Transform your body on your terms with Sculpt Smart. Our <strong>customized</strong> fitness programs and workouts are designed to fit your unique <strong>goals, lifestyle, level of experience, and preferences</strong>. Whether you're just starting out, or have been weight lifting for years, you can achieve amazing results from the comfort of your <strong>own home</strong>. Say goodbye to crowded gyms and hello to effective workouts tailored to you! </p>
+            <p id="blurb" style="margin-top: 70px; margin-bottom: -20px;">Transform your body on your terms with Sculpt Smart. Our <strong>customized</strong> fitness programs and workouts are designed to fit your unique <strong>goals, lifestyle, level of experience, and preferences</strong>. Whether you're just starting out, or have been weight lifting for years, you can achieve amazing results from the comfort of your <strong>own home</strong>. Say goodbye to crowded gyms and hello to effective workouts tailored to you! </p>
         </div>
 
         <h2 style="margin-bottom: 15px;">Don't Believe Us? <br> Hear What Our Members Have To Say...</h2>
@@ -255,3 +351,4 @@
         </div>
     </body>
 </html>
+
