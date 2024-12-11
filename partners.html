@@ -131,7 +131,7 @@
                 <li><a href="service.php">Services</a></li>
                 <li><a href="plans.html">Plans</a></li>
                 <li><a href="partners.html">Partners</a></li>
-                <li><a href="contactUs.html">Contact Us</a></li>
+                <li><a href="contactUs.html">Contact</a></li>
                 <li><a href="login.html">Login</a></li>
             </ul>
         </div>
@@ -177,5 +177,19 @@
         </ul>
     </div>
 </div>
+<!-- using a timestamp in the url to clear cache basically and ensure updating -->
+<script>
+    // Check if the 'timestamp' query string already exists
+    if (!window.location.href.includes('timestamp=')) {
+    // Get the current timestamp
+    let timestamp = new Date().getTime();
+    // Append the timestamp to the URL as a query string to update the page
+    let currentUrl = window.location.href;
+    let newUrl = currentUrl.includes('?') 
+        ? `${currentUrl}&timestamp=${timestamp}`: `${currentUrl}?timestamp=${timestamp}`;
+    // Redirect to the new URL with the timestamp
+    window.location.href = newUrl;
+    }
+</script> 
 </body>
 </html>

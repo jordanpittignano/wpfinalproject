@@ -41,7 +41,7 @@ html,body {
 
 #nav ul{
     list-style-type: none; 
-    font-size: 20px; 
+    font-size: 17px; 
     margin-bottom: 33px;
     padding: 5px; 
     font-weight: 400;
@@ -58,11 +58,12 @@ html,body {
 #nav li a {
     padding: 10px;
     text-decoration: none;
-    font-size: 20px;
+    font-size: 17px;
     color:#f48341;
     font-family: 'Manrope', sans-serif; 
     font-weight: 100;
 }
+
 
 h1 {
     font-family: 'Avenir Next Bold', sans-serif;
