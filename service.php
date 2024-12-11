@@ -95,6 +95,50 @@
             color: #ffffff; 
             font-weight: bold
         }
+        .exercise-list {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .exercise-item {
+            background-color: #f9f9f9;
+            border-left: 4px solid #ff7b00;
+            padding: 15px;
+            margin-bottom: 10px;
+            transition: background-color 0.3s ease;
+        }
+
+        .exercise-item:hover {
+            background-color: #f0f0f0;
+        }
+
+        .exercise-name {
+            font-weight: bold;
+            color: #333;
+            display: block;
+            margin-bottom: 8px;
+            font-size: 18px;
+        }
+
+        .exercise-details {
+            display: flex;
+            justify-content: space-between;
+            color: #666;
+            font-size: 14px;
+        }
+
+        .exercise-equipment {
+            margin-right: 10px;
+        }
+
+        .exercise-difficulty {
+            background-color: #ff7b00;
+            color: white;
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-size: 12px;
+        }
 
         @media (max-width: 1500px) {
             #leftbox, #rightbox {
@@ -136,41 +180,57 @@
     </style>
    
     <script>    
-        $(document).ready(function() {
-            for (i=0;i<arr.length;i++) {
-                $('#muscle').append("<option>"+arr[i]+"</option>")
-            }
-            $('#btn').click(function() {
-                $('#api').html('')
-                var muscle = $('#muscle').val()
-                var level = $('#level').val()
-                $.ajax({
-                    method: 'GET',
-                    url: 'https://api.api-ninjas.com/v1/exercises?muscle=' + muscle,
-                    headers: { 'X-Api-Key': 'uFRxuGhKBNF7XGiH2iWypw==xtRhgHAiKj8xHpET'},
-                    contentType: 'application/json',
-                    success: function(result) {
-                        datastring = JSON.stringify(result)
-                        info = JSON.parse(datastring)
-                        $('#api').html(JSON.stringify(info, null, 2));
-                        ctr =0
-                        if (level == "expert") {
-                            $('#api').html('Uprade to Pro to see more options!')
-                        } else {
-                            for (i=0;i<info.length;i++) {
-                                if (info[i]['difficulty'] == level) {
-                                    $('#api').append(info[i]['name'] + "</br>")
-                                    ctr++
-                                }      
-                            }
+    $(document).ready(function() {
+    for (i=0;i<arr.length;i++) {
+        $('#muscle').append("<option>"+arr[i]+"</option>")
+    }
+    $('#btn').click(function() {
+        $('#api').html('')
+        var muscle = $('#muscle').val()
+        var level = $('#level').val()
+        $.ajax({
+            method: 'GET',
+            url: 'https://api.api-ninjas.com/v1/exercises?muscle=' + muscle,
+            headers: { 'X-Api-Key': 'uFRxuGhKBNF7XGiH2iWypw==xtRhgHAiKj8xHpET'},
+            contentType: 'application/json',
+            success: function(result) {
+                if (level == "expert") {
+                    $('#api').html('Upgrade to Pro to see more options!')
+                } else {
+                    let formattedOutput = '<ul class="exercise-list">';
+                    let counter = 0;
+                    
+                    result.forEach(exercise => {
+                        if (exercise['difficulty'].toLowerCase() === level.toLowerCase()) {
+                            formattedOutput += `
+                                <li class="exercise-item">
+                                    <span class="exercise-name">${exercise['name']}</span>
+                                    <div class="exercise-details">
+                                        <span class="exercise-equipment">Equipment: ${exercise['equipment']}</span>
+                                        <span class="exercise-difficulty">${exercise['difficulty']}</span>
+                                    </div>
+                                </li>
+                            `;
+                            counter++;
                         }
-                    },
-                    error: function ajaxError(jqXHR) {
-                    console.error('Error: ', jqXHR.responseText);
+                    });
+                    
+                    formattedOutput += '</ul>';
+                    
+                    if (counter === 0) {
+                        $('#api').html('No exercises found for the selected difficulty level.');
+                    } else {
+                        $('#api').html(formattedOutput);
                     }
-                });
-            })
-        })
+                }
+            },
+            error: function ajaxError(jqXHR) {
+                console.error('Error: ', jqXHR.responseText);
+                $('#api').html('An error occurred while fetching exercises.');
+            }
+        });
+    })
+})
         arr = []
     </script>
 </head>
