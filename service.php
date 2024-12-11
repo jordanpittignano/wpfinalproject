@@ -222,13 +222,14 @@
             <span style="font-family: 'Avenir Next Bold', sans-serif;">Sculpt</span>
             <span style="font-family: 'Manrope', sans-serif; font-weight: 100;">Smart</span>
         </div>
-        <div id="nav">
+        <div id='nav'>
             <ul>
-                <li><a href="sculptsmart.html">Home</a></li>
-                <li><a href="service.php">Services</a></li>
-                <li><a href="plans.html">Plans</a></li>
-                <li><a href="partners.html">Partners</a></li>
-                <li><a href="contactUs.html">Contact Us</a></li>
+                <li><a href='sculptsmart.html'>Home</a></li>
+                <li><a href='service.php'>Services</a></li>
+                <li><a href='plans.html'>Plans</a></li>
+                <li><a href='partners.html'>Partners</a></li>
+                <li><a href='contactUs.html'>Contact Us</a></li>
+                <li><a href='login.html'>Login</a></li>
             </ul>
         </div>
     </div>

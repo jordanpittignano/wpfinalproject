@@ -22,6 +22,24 @@
         label {
             font-family: 'Manrope', sans-serif;
             color: #000000;
+            font-size: 25px;
+        }
+        input[type="submit"] {
+            background-color: #ff7b00; 
+            padding: 5px; 
+            color: #ffffff; 
+            font-weight: bold;
+            margin: 20px;
+        }
+        #botnav li a {
+            font-weight: normal;
+        }
+        h2 {
+            font-size: 30px;
+        }
+        .exercise-list {
+            font-weight: normal;
+            color: #000000;
         }
         
     </style>
@@ -43,22 +61,24 @@
     <?php
         echo "
         <div id='header'>
-        <div id='header-content'>
-            <a href='sculptsmart.html'>
-                <img id='header img' src='logo.jpg'>
-            </a>
-            <span style='font-family: 'Avenir Next Bold', sans-serif;'>Sculpt</span>
-            <span style='font-family: 'Manrope', sans-serif; font-weight: 100;'>Smart</span>
-        </div>
-        <div id='nav'>
-            <ul>
-                <li><a href='sculptsmart.html'>Home</a></li>
-                <li><a href='service.php'>Services</a></li>
-                <li><a href='plans.html'>Plans</a></li>
-                <li><a href='partners.html'>Partners</a></li>
-                <li><a href='contactUs.html'>Contact Us</a></li>
-            </ul>
-        </div>
+            <div id='header-content'>
+                <a href='sculptsmart.html'>
+                    <img id='header img' src='logo.jpg'>
+                </a>
+                <span style='font-family: 'Avenir Next Bold', sans-serif;'>Sculpt</span>
+                <span style='font-family: 'Manrope', sans-serif; font-weight: 100;'>Smart</span>
+
+            </div>
+            <div id='nav'>
+                <ul>
+                    <li><a href='sculptsmart.html'>Home</a></li>
+                    <li><a href='service.php'>Services</a></li>
+                    <li><a href='plans.html'>Plans</a></li>
+                    <li><a href='partners.html'>Partners</a></li>
+                    <li><a href='contactUs.html'>Contact Us</a></li>
+                    <li><a href='login.html'>Login</a></li>
+                </ul>
+            </div>
         </div>";
 
         echo "
@@ -69,7 +89,7 @@
                 <select size='1' id='muscle' name='muscle'>
                     </select>
             </br>
-            <label>Choose Difficulty: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+            <label>Choose Difficulty: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
                 <select size='1' name='level' id='level'>
                     <option>beginner</option>
                     <option>intermediate</option>
@@ -106,7 +126,8 @@
                     $result = $conn->query($sql);
                 
                     if ($result->num_rows > 0) {
-                        echo "<div class='excercise-list'>";
+                        echo "<div class='exercise-list'>";
+                        echo "<h2>Your Sculpting Plan:</h2>";
                         while($row = $result->fetch_assoc()) {
                             $exc = $row['excercise'];
                             echo $exc . "</br>";
@@ -141,6 +162,7 @@
             } else {
                 // Decode and handle the response
                 $result = json_decode($response, true);
+                echo "<h2>Pick An Exercise:</h2>";
                 echo "<div id='secondform'><form method='post'>";
                 echo "<select size='10' name='exc' id='exc'>";
                 for ($i=0;$i<10;$i++) {
